@@ -13,6 +13,7 @@ Base URL
 # Endpoints
 
 ## POST PASSWORD METHOD IN Json: 
+``` JavaScript
 {
     "id": 1,
     "address": "example_address",
@@ -22,6 +23,7 @@ Base URL
         "username": "example_user"
     }
 }
+```
 
 ## This is just example if you need more you can see in these link https://passwords.besenior.uz/swagger/ or https://passwords.besenior.uz/redoc/
 
