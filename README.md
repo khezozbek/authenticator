@@ -9,7 +9,7 @@ Base URL
 
 ##### AFTER LOGIN: [https://passwords.besenior.uz/api/password/]
 
-######## More in https://passwords.besenior.uz/swagger/ or https://passwords.besenior.uz/redoc/
+##### More in https://passwords.besenior.uz/swagger/ or https://passwords.besenior.uz/redoc/
 # Endpoints
 
 ## POST PASSWORD METHOD IN Json: 
