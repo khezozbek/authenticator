@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Ro'yxatdan o'tish{% endblock %}
+{% block content %}
+<br>
+    <form method="post" id="registration-form">
+        {% csrf_token %}
+        <h2>Ro'yxatdan o'tish</h2>
+
+        <div>
+            <label for="{{ form.username.id_for_label }}">Foydalanuvchi nomi:</label>
+            {{ form.username }}
+            {% for error in form.username.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <label for="{{ form.password1.id_for_label }}">Parol:</label>
+            {{ form.password1 }}
+            {% for error in form.password1.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <label for="{{ form.password2.id_for_label }}">Parolni qayta kiriting:</label>
+            {{ form.password2 }}
+            {% for error in form.password2.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <button type="submit">Ro'yxatdan o'tish</button>
+        </div>
+        <p>Akkauntingiz allaqachon bor bo'lsa <a href="{% url 'login' %}">bosing</a></p>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Kirish{% endblock %}
+{% block content %}
+<form method="post" id="registration-form">
+        {% csrf_token %}
+        <h2>Profilega kirish</h2>
+        <div>
+            <label for="{{ form.username.id_for_label }}">Foydalanuvchi nomi:</label>
+            {{ form.username }}
+            {% for error in form.username.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <label for="{{ form.password.id_for_label }}">Parol:</label>
+            {{ form.password }}
+            {% for error in form.password.errors %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+        </div>
+        <div>
+            <button type="submit">Kirish</button>
+        </div>
+        <p>Akkauntingiz bo'lmasa bo'lsa <a href="{% url 'register' %}">bosing</a></p>
+    </form>
+{% endblock %}

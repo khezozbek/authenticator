@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<p>
+    {{ user.username }}, Welcome!
+
+    <hr>
+        <ul>
+            {% if userof %}
+                <h4>Sizning Passwordlaringiz, <a href="{% url 'create' %}">Yangi yaratish</a></h4>
+                <form method="get">
+                    <input type="text" value="" name='search' placeholder="Search password by address">
+                    <button type="submit">search</button>
+                </form>
+                {% for x in userof %}
+                    <li><a href="{% url 'detail' x.pk %}">{{ x.address }}</a></li>
+                {% endfor %}
+            {% else %}
+                <h4>Siz hali password saqlamadingiz <a href="{% url 'create' %}">yangi addres yaratish</a></h4>
+            {% endif %}
+        </ul>
+</p>
+{% endblock %}

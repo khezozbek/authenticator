@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        .valid {
+            border-color: blue;
+        }
+        .invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+        {% block content %}
+        {% endblock %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#registration-form input").on("input", function () {
+                if ($(this).val().trim() === "") {
+                    $(this).removeClass("valid").addClass("invalid");
+                } else {
+                    $(this).removeClass("invalid").addClass("valid");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
