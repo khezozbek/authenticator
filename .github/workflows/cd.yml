@@ -33,4 +33,4 @@ jobs:
 
       - name: Deploy to AWS Elastic Beanstalk
         run: |
-          eb deploy your-environment-name
+          eb deploy name
