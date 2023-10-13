@@ -26,4 +26,3 @@ Base URL
 
 ## This is just example if you need more you can see in these link https://passwords.besenior.uz/swagger/ or https://passwords.besenior.uz/redoc/
 
-# real developer know how to use this project 😎
